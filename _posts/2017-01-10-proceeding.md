@@ -5,6 +5,7 @@ date: 2017-01-10 19:40:06
 description: 1월 10일 회의록
 tags: 
  - sun-proceeding
+comments: true
 ---
 
 # 루키햇님 1월 10일 회의록 
