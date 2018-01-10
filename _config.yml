@@ -12,7 +12,8 @@ url: http://leedeokho.github.io
 # For a project page here should be a project name. Otherwise (for user's/organization's page leave it empty)
 # baseurl: '/jekyll-clean-dark'
 # baseurl: '/blog'
-baseurl: '/leedeokho.github.io'
+# baseurl: '/leedeokho.github.io'
+baseurl: ''
 
 share:
   facebook: true
