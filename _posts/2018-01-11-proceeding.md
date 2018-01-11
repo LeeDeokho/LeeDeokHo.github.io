@@ -40,20 +40,20 @@ comments: true
 
 * MockUp
 
-![img]({{ '/assets/images/2018-01-11-mockup/sendLetter.jpg' | relative_url }}){: .center-image }
+![img]({{ '/assets/images/2018-01-11-mockup/sendLetter.png' | relative_url }}){: .center-image }
 * 편지 보내기
 	- 메일 보내는 기능
 
-![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-clickedFileAttach.jpg' | relative_url }}){: .center-image }
+![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-clickedFileAttach.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 파일 첨부
 	- 파일 선택창 띄워서 파일 선
     - 선택 파일 리스트 히든(true/false)
 
-![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-success.jpg' | relative_url }}){: .center-image }
+![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-success.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 성공 
 	- 메일 보내기 성공 시 성공 페이지로 이동
 
-![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-fail.jpg' | relative_url }}){: .center-image }
+![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-fail.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 실패 
 	- 메일 보내기 실패 시 알러트창 띄우기
 
