@@ -21,7 +21,7 @@ comments: true
 		* 이름 스토밍 : 핑퐁
 	
 	* 노인분들을 위한
-		* 노인분들은 메일 사용을 잘 못하시니까 노인분들도 쓸 수 있을만큼 쉽게 만들어서 쓸 수 있도록 도와드리자
+		* 노인분들은 메일 사용을 잘 못하시니까 노인분들도 쓸 수 있을만큼 쉽게 만들어서 쓸 수 있도록 도와주기
 		* 최대한 쉽고 간결하게
 		* 이름 스토밍 :  
 
@@ -46,7 +46,7 @@ comments: true
 ![img]({{ '/assets/images/2018-01-11-mockup/login.png' | relative_url }}){: .center-image }
 * 로그인 & 회원가입
 	1. 아이디가 있다면 아이디 패스워드를 입력후 로그인 버튼을 누른다.
-		- 아이디와 비밀번호를 제대로 입력했다면 메인페이지로 연결한다
+		- 아이디와 비밀번호를 제대로 입력했다면 메인페이지로 연결한다.
 		- 일치하는 id,pw가 없다면 팝업창을 띄운다.
 	2. 아이디가 없다면 회원가입 버튼을 누르며 회원가입용 페이지로 연결한다.
 	    
@@ -60,11 +60,11 @@ comments: true
 
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser-differentPwd.png' | relative_url }}){: .center-image }
 * 회원가입 - 비밀번호 틀릴 시
-	- 비밀번호 확인 텍스트와 비밀번호가 같지않으면 회원가입 할 수 없다
+	- 비밀번호 확인 텍스트와 비밀번호가 같지않으면 회원가입 할 수 없다.
 
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser-repeated.png' | relative_url }}){: .center-image }
 * 회원가입 - 중복된 값이 있을 경우
-	- 아이디, 별명에 대해서는 중복확인을 하고 중복이 없을시 회원가입 할 수 잇다.
+	- 아이디, 별명에 대해서는 중복확인을 하고 중복이 없을시 회원가입 할 수 있다.
 
 ---
 ### 메인 페이지 프레임
@@ -111,7 +111,8 @@ comments: true
 ### 보낸 편지함 
 ![img]({{ '/assets/images/2018-01-11-mockup/sendLetterBox.png' | relative_url }}){: .center-image }
 * 보낸 편지함
-	- 사용자가 보낸 편지들의 목록
+	- 사용자가 보낸 편지들의 정보를 보여준다.
+	- 중요편지는 별표를 눌러 중요 편지로 분류 가능하다.
 
 ---
 ### 편지 보기
@@ -135,18 +136,25 @@ comments: true
 
 ![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-clickedFileAttach.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 파일 첨부
-	- 파일 선택창 띄워서 파일 선택
+	- 파일 선택창 띄워서 파일을 선택 할 수 있다.
     - 선택 파일 리스트 히든(true/false)
 
 ![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-success.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 성공 
-	- 메일 보내기 성공 시 성공 페이지로 이동
+	- 메일 보내기 성공 시 성공 페이지로 이동한다.
 	- 사용자에게 메일이 성공적으로 발송되었음을 알려주고, 메인페이지로 이동하는 버튼을 표시한다.
+
 ![img]({{ '/assets/images/2018-01-11-mockup/sendLetter-fail.png' | relative_url }}){: .center-image }
 * 편지 보내기 - 실패 
-	- 메일 보내기 실패 시 알러트창 띄우기
+	- 메일 보내기 실패 시 팝업창을 띄운다.
 
 
 
 
 
+---
+## 내일 할 일
+- [ ] 우선 순위 정하기
+- [ ] 세부 일정 정하기 
+- [ ] DB 설계
+- [ ] API 정의서
