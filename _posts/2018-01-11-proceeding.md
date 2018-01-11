@@ -161,6 +161,18 @@ comments: true
 |이덕호|편지 보내기|
 |함상혁|로그인 & 회원가입|
 
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|----
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3
+{: rules="groups"}
+
+
 ---
 ## 내일 할 일
 - [ ] 우선 순위 정하기
