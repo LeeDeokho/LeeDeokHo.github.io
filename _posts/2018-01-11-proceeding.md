@@ -39,6 +39,7 @@ comments: true
 
 
 * ## MockUp
+
 ### 로그인 & 회원가입 관련
 ![img]({{ '/assets/images/2018-01-11-mockup/login.png' | relative_url }}){: .center-image }
 * 로그인 & 회원가입
@@ -54,6 +55,7 @@ comments: true
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser-differentPwd.png' | relative_url }}){: .center-image }
 * 회원가입 - 비밀번호 틀릴 시
 	- 비밀번호 확인 텍스트와 비밀번호가 같지않으면 회원가입 할 수 없다
+
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser-repeated.png' | relative_url }}){: .center-image }
 * 회원가입 - 중복된 값이 있을 경우
 	- 아이디, 별명에 대해서는 중복확인을 하고 중복이 없을시 회원가입 할 수 잇다.
@@ -62,13 +64,23 @@ comments: true
 ### 메인 페이지 프레임
 ![img]({{ '/assets/images/2018-01-11-mockup/main.png' | relative_url }}){: .center-image }
 * 메인 페이지
-
+	- 상단바에서 서비스 로고와 사용자의 프로필 정보를 확인할 수 있다.
+	- 왼쪽 전면의 네비게이션 바에서 사용자는 기능을 선택할 수 있다.
+	    - 편지 쓰기
+	    - 받은 편지함
+	    - 보낸 편지함
+	    - 중요한 편지함
+	- 네비게이션의 각 기능을 선택하면 해당 페이지로 이동하고, 아이콘 색깔이 변한다.  
+	
 ![img]({{ '/assets/images/2018-01-11-mockup/main-clickedProfileIcon.png' | relative_url }}){: .center-image }
 * 메인 페이지 - 사용자 프로필 아이콘 클릭 시 
+	- 프로필 정보는 사용자가 선택 이미지와 별명이 표시된다.
+	    - 프로필 이미지를 클릭하여 시스템에서 제공되는 이미지 중 사용자가 원하는 프로필 이미지를 선택할 수 있다.
 
 ![img]({{ '/assets/images/2018-01-11-mockup/main-clickedPerson.png' | relative_url }}){: .center-image }
 * 메인 페이지 - 사용자 별명 클릭 시 
-
+	- 드롭다운 메뉴(▼)를 클릭하여 로그아웃 기능을 선택할 수 있다.
+    	- 로그아웃을 클릭하면 로그아웃과 동시에 로그인 페이지로 이동한다.
 
 ---
 ### 받은 편지함
