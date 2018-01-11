@@ -26,7 +26,7 @@ comments: true
 	
 	* 맞춤법 검사(격식 차리기)
 		* 템플릿 제공(상황에 맞는)(ex: 교수님한테 보낼 때, 거래처 직원에게 보낼 떄 등)
-		* 이름 스토밍 : MMM(Manner Maketh Man)
+		* 이름 스토밍 : MMM(Manner Maketh Mail)
 	
 	* 일정 자동 생성
 	
@@ -47,3 +47,4 @@ comments: true
 	* 회원 관리
 		* 회원 가입
 		* 로그인
+
