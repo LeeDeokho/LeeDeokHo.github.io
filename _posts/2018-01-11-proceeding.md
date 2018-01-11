@@ -40,16 +40,22 @@ comments: true
 
 * ## MockUp
 
+## 핑퐁
+
 ### 로그인 & 회원가입 관련
 ![img]({{ '/assets/images/2018-01-11-mockup/login.png' | relative_url }}){: .center-image }
 * 로그인 & 회원가입
 	1. 아이디가 있다면 아이디 패스워드를 입력후 로그인 버튼을 누른다.
-	    * 아이디와 비밀번호를 제대로 입력했다면 메인페이지로 연결한다
-  		* 일치하는 id,pw가 없다면 팝업창을 띄운다.
-  	2. 아이디가 없다면 회원가입 버튼을 누르며 회원가입용 페이지로 연결한다.
+		- 아이디와 비밀번호를 제대로 입력했다면 메인페이지로 연결한다
+		- 일치하는 id,pw가 없다면 팝업창을 띄운다.
+	2. 아이디가 없다면 회원가입 버튼을 누르며 회원가입용 페이지로 연결한다.
 	    
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser.png' | relative_url }}){: .center-image }
 * 회원가입
+	- 제약 조건 
+		- 아이디는 5-20 자, 별명은 2-10자, 비밀번호는 6-20자
+        - 아이디의 경우 영어와 숫자로 구성되어야하며 첫글자는 영어
+        - 비밀번호는 영어, 숫자로 구성됨(특수문자 사용불가)
 	- 모든 조건을 만족했을때 회원가입 버튼을 누르면 회원가입이 된다.
 
 ![img]({{ '/assets/images/2018-01-11-mockup/registerUser-differentPwd.png' | relative_url }}){: .center-image }
@@ -71,7 +77,7 @@ comments: true
 	    - 보낸 편지함
 	    - 중요한 편지함
 	- 네비게이션의 각 기능을 선택하면 해당 페이지로 이동하고, 아이콘 색깔이 변한다.  
-	
+
 ![img]({{ '/assets/images/2018-01-11-mockup/main-clickedProfileIcon.png' | relative_url }}){: .center-image }
 * 메인 페이지 - 사용자 프로필 아이콘 클릭 시 
 	- 프로필 정보는 사용자가 선택 이미지와 별명이 표시된다.
@@ -86,15 +92,18 @@ comments: true
 ### 받은 편지함
 ![img]({{ '/assets/images/2018-01-11-mockup/main-checked.png' | relative_url }}){: .center-image }
 * 받은 편지함 - 읽은 편지일 경우 
-
+	- 읽은 편지 일 경우 열린 편지아이콘이 표시 
+	- 편지 클릭 시 편지 보기 페이지로 전환
 ![img]({{ '/assets/images/2018-01-11-mockup/importantLetter.png' | relative_url }}){: .center-image }
 * 중요 편지함
+	- 중요 편지로 선택 한 편지들의 목록
 
 ---
 ### 편지 보기
 ![img]({{ '/assets/images/2018-01-11-mockup/viewLetter.png' | relative_url }}){: .center-image }
 * 편지 보기
-
+	- 받은 편지를 확인 하는 페이지
+	- 답장하기 클릭 시 편지 쓰기 페이지로 전환
 ---
 ### 편지 보내기 관련
 
