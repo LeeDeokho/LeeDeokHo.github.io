@@ -38,7 +38,53 @@ comments: true
 
 
 
-* MockUp
+* ## MockUp
+### 로그인 & 회원가입 관련
+![img]({{ '/assets/images/2018-01-11-mockup/login.png' | relative_url }}){: .center-image }
+* 로그인 & 회원가입
+	1. 아이디가 있다면 아이디 패스워드를 입력후 로그인 버튼을 누른다.
+	    * 아이디와 비밀번호를 제대로 입력했다면 메인페이지로 연결한다
+  		* 일치하는 id,pw가 없다면 팝업창을 띄운다.
+  	2. 아이디가 없다면 회원가입 버튼을 누르며 회원가입용 페이지로 연결한다.
+	    
+![img]({{ '/assets/images/2018-01-11-mockup/registerUser.png' | relative_url }}){: .center-image }
+* 회원가입
+	- 모든 조건을 만족했을때 회원가입 버튼을 누르면 회원가입이 된다.
+
+![img]({{ '/assets/images/2018-01-11-mockup/registerUser-differentPwd.png' | relative_url }}){: .center-image }
+* 회원가입 - 비밀번호 틀릴 시
+	- 비밀번호 확인 텍스트와 비밀번호가 같지않으면 회원가입 할 수 없다
+![img]({{ '/assets/images/2018-01-11-mockup/registerUser-repeated.png' | relative_url }}){: .center-image }
+* 회원가입 - 중복된 값이 있을 경우
+	- 아이디, 별명에 대해서는 중복확인을 하고 중복이 없을시 회원가입 할 수 잇다.
+
+---
+### 메인 페이지 프레임
+![img]({{ '/assets/images/2018-01-11-mockup/main.png' | relative_url }}){: .center-image }
+* 메인 페이지
+
+![img]({{ '/assets/images/2018-01-11-mockup/main-clickedProfileIcon.png' | relative_url }}){: .center-image }
+* 메인 페이지 - 사용자 프로필 아이콘 클릭 시 
+
+![img]({{ '/assets/images/2018-01-11-mockup/main-clickedPerson.png' | relative_url }}){: .center-image }
+* 메인 페이지 - 사용자 별명 클릭 시 
+
+
+---
+### 받은 편지함
+![img]({{ '/assets/images/2018-01-11-mockup/main-checked.png' | relative_url }}){: .center-image }
+* 받은 편지함 - 읽은 편지일 경우 
+
+![img]({{ '/assets/images/2018-01-11-mockup/importantLetter.png' | relative_url }}){: .center-image }
+* 중요 편지함
+
+---
+### 편지 보기
+![img]({{ '/assets/images/2018-01-11-mockup/viewLetter.png' | relative_url }}){: .center-image }
+* 편지 보기
+
+---
+### 편지 보내기 관련
 
 ![img]({{ '/assets/images/2018-01-11-mockup/sendLetter.png' | relative_url }}){: .center-image }
 * 편지 보내기
