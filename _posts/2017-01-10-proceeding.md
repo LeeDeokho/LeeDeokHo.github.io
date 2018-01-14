@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2017-01-10-proceeding"
-date: 2017-01-10 19:40:06
+title: "2018-01-10-proceeding"
+date: 2018-01-10 19:40:06
 description: 1월 10일 회의록
 tags: 
  - sun-proceeding
