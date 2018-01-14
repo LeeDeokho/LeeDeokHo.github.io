@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2018-01-12_proceeding"
+title: "2018-01-12-proceeding"
 date: 2018-01-12 19:40:06
 description: 1월 12일 회의록
 tags: 
