@@ -8,6 +8,9 @@ tags:
 comments: true
 ---
 
+# 목차
+- [For Windows](#for-windows)
+- [For Mac](#for-mac)
 
 # CapsLock을 유용하게 바꾸기
 ---
