@@ -11,8 +11,9 @@ comments: true
 
 # 목록
 - [mybatis](#mybatis)
-- [추가 예정](#something)
+- [추가 예정](#추가-예정)
 - [mybatis](#mybatis)
+
 
 
 
@@ -30,7 +31,5 @@ comments: true
 
 
 
-<div id = "something">
-</div>
 
 ## 추가 예정 
