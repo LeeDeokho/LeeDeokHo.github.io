@@ -15,7 +15,8 @@ comments: true
 
 
 
-<div id = "mybatis">
+<div id = "mybatis"/>
+
 ## mybatis
 스프링 프로젝트를 시작하면서 제일 낯설었던 것이 mybatis를 사용하는 것이었다. 
 
@@ -27,9 +28,9 @@ comments: true
 <insert id="insert" parameterType="Letter" useGeneratedKeys="true" keyProperty="letterId">
 ```
 
-</div>
 
 
-<div id = "something">
+
+<div id = "something"/>
+
 ## 추가 예정 
-</div>
