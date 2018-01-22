@@ -12,9 +12,6 @@ comments: true
 # 목록
 - [mybatis](#mybatis)
 - [추가 예정](#추가-예정)
-- [mybatis](#mybatis)
-
-
 
 
 ## mybatis
