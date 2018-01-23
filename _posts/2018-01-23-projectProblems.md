@@ -12,7 +12,7 @@ comments: true
 # 목록
 - [mybatis](#mybatis)
 - [krajee fileinput](#krajee-fileinput)
-
+- [mysql](#mysql)
 
 ## mybatis
 스프링 프로젝트를 시작하면서 제일 낯설었던 것이 mybatis를 사용하는 것이었다. 
@@ -42,3 +42,28 @@ preview를 없애면 파일을 추가해도 preview가 안나온다.
 해결 방안.
     1. glyphicon이 나오게 한다.
     2. fa theme를 그대로 사용하고 preview를 숨겼다 보여줬다 조작을 해본다.
+
+
+
+## mysql
+
+- 루트 계정 비밀번호 변경
+
+`mysql -u root -p`
+를 입력 후 root 비밀번호를 입력해 root 계정으로 로그인을 한다.
+
+`use mysql;`
+를 입력 하면 
+`Database changed` 라는 문구가 나온다.
+
+`describe user;`
+를 해보면 password라는 필드가 없다.
+password 대신에 `authentication_string` 라는 필드가 있다.
+
+```
+update user set authentication_string=password('바꿀 비밀 번호') where user='root';
+```
+
+라고 입력해주면 비밀변호 변경 완료!
+
+
