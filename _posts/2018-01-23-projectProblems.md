@@ -13,6 +13,7 @@ comments: true
 - [mybatis](#mybatis)
 - [krajee fileinput](#krajee-fileinput)
 - [mysql](#mysql)
+- [Spring Dependency](#spring-dependency)
 
 ## mybatis
 스프링 프로젝트를 시작하면서 제일 낯설었던 것이 mybatis를 사용하는 것이었다. 
@@ -67,3 +68,38 @@ update user set authentication_string=password('바꿀 비밀 번호') where use
 라고 입력해주면 비밀변호 변경 완료!
 
 
+## Spring Dependency
+노트북에서 하다가 데스크탑으로 옮겨서 실행하니 다음과 같은 에러 발생.
+처음엔 코드가 잘못된 줄 알았으나, 다른 팀원 환경에서는 다 잘되고 내 데스크탑에서만 안되는 상황.
+진혜진선임님의 도움으로 해결.<br>
+내컴퓨터 기준으로 `C:\Users\{사용자이름}\.m2\repository`
+안에 dependency들이 저장된다. 그래서 폴더를 날리고 다시 업데이트해서 dependency를 다운 받았더니 해결.
+
+```
+Failed to instantiate SLF4J LoggerFactory
+Reported exception:
+java.lang.NoClassDefFoundError: ch/qos/logback/core/spi/LifeCycle
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:59)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:50)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.apache.commons.logging.impl.SLF4JLogFactory.getInstance(SLF4JLogFactory.java:155)
+	at org.apache.commons.logging.impl.SLF4JLogFactory.getInstance(SLF4JLogFactory.java:132)
+	at org.apache.commons.logging.LogFactory.getLog(LogFactory.java:273)
+	at org.springframework.boot.SpringApplication.<clinit>(SpringApplication.java:179)
+	at com.nhnent.rookie5.pingpong.PingpongApplication.main(PingpongApplication.java:17)
+```
