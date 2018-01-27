@@ -14,6 +14,7 @@ comments: true
 - [krajee fileinput](#krajee-fileinput)
 - [mysql](#mysql)
 - [Spring Dependency](#spring-dependency)
+- [리눅스 서버에 배포하기](#리눅스-서버에-배포하기))
 
 ## mybatis
 스프링 프로젝트를 시작하면서 제일 낯설었던 것이 mybatis를 사용하는 것이었다. 
@@ -103,3 +104,32 @@ java.lang.NoClassDefFoundError: ch/qos/logback/core/spi/LifeCycle
 	at org.springframework.boot.SpringApplication.<clinit>(SpringApplication.java:179)
 	at com.nhnent.rookie5.pingpong.PingpongApplication.main(PingpongApplication.java:17)
 ```
+
+## 리눅스 서버에 배포하기
+우선 apache + tomcat 조합으로 서버를 구동
+<br>하면서 발생한 에러들
+
+1. Could not find or load main class org.apache.maven.wrapper.MavenWrapperMain
+이 에러는 처음 접해 본 에러라서 당황했다 ..
+`{project-folder}/.mvn/wrapper/`에 maven-wrapper.jar 라는 파일이 없어서 생기는 에러. 
+api서버 web서버 두개를 돌리기 때문에 web에서 파일 복사해 오는 것으로 일단 처리를 함.
+
+
+
+2. org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test)  There are test failures.
+
+이건 또 뭐지 ..
+하는 찰나 구글링을 해보니 `pom.xml`에 아래의 플러그인을 추가하면 된다고 발견.
+```XML
+ <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.19.1</version>
+        </plugin>
+  </plugins>
+```
+
+3. 이번 에러는 한솔이의 도움으로 잘 해결! 
+한솔이 블로그 주소 : 
+[https://jhansol.github.io//2018/01/25/War-error-solution.html](https://jhansol.github.io//2018/01/25/War-error-solution.html)
