@@ -132,6 +132,31 @@ Data Access Object의 약자로서 DB를 사용해 데이터를 조회하거나 
 | 결과 | 어떤 결과가 나온다 | 특별한 예외가 던져진다
 
 
+
+
+### 테스트를 위한 애플리케이션 컨텍스트 관리
+
+```JAVA
+
+@RunWith(SpringJUnit4ClassRunner.class) //  => 스프링의 테스트 컨텍스트 프레임워크의 JUnit 확장기능 지정
+@ContextConfiguration(locations="/applicationContext.xml") // 테스트 컨텍스트가 자동으로 만들어줄 애플리케이션 컨텍스트의 위치 지정
+public class UserDaoTest {
+	@Autowired // => 테스트 오브젝트가 만들어지고 나면 스프링 테스트 컨텍스트에 의해 자동으로 값이 주입된다.
+	ApplicationContext context;
+	
+    ...
+
+	@Before
+	public void setUp() {
+		this.dao = this.context.getBean("userDao", UserDao.class);
+        ...
+	}
+
+```
+이렇게 생성된 context는 매 테스트 마다 동일한 값이다. 즉 한번만 생성된다.
+
+
+
 ## 3장. 템플릿
 
 템플릿이란 바뀌는 성질이 다른 코드 중에서 변경이 거의 일어나지 않으며 일정한 패턴으로 유지되는 특성을 가진 부분을 자유롭게 변경되는 성질을 가진 부분으로부터 독립시켜서 효과적으로 활요할 수 있도록 하는 방법
