@@ -135,3 +135,10 @@ api서버 web서버 두개를 돌리기 때문에 web에서 파일 복사해 오
 `request.getSession().getServletContext().getRealPath("/");`
 를 이용해서 webapp의 경로를 가져와서 그 뒤에 파일을 저장할 경로를 더해서 저장하는 식으로 했는 데, 
 리눅스 서버에서는 api 서버의 폴더 경로를 가져와서 문제가 발생.
+
+
+
+## Redis
+
+### - real web server에 Redis 설치하기
+
