@@ -142,3 +142,7 @@ api서버 web서버 두개를 돌리기 때문에 web에서 파일 복사해 오
 
 ### - real web server에 Redis 설치하기
 
+
+### Crontab으로 tomcat 서버 이상 시 재실행하기
+
+
