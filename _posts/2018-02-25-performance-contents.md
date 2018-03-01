@@ -538,7 +538,7 @@ To the degree that performance testing begins before the system or application t
 ### Summary Table of Core Performance-Testing Activities(핵심 성과 테스트 활동 요약표)
 다음 표는 각 활동에 대한 가장 일반적인 입력 및 출력과 함께 7 가지 핵심 성능 테스트 활동을 요약합니다. 프로젝트 컨텍스트는 각 활동의 중요한 입력 항목 임에도 불구하고 나열되지 않습니다.
 
-1. Activity1- Identify the Test Environment 
+1. Identify the Test Environment 
 - Input 
     - 논리적 및 물리적 생산 아키텍처
     - 논리적 및 물리적 테스트 아키텍처
@@ -548,7 +548,7 @@ To the degree that performance testing begins before the system or application t
     - 환경 관련 문제
     - 추가 공구가 필요한지 여부 결정
 
-2. Activity2- Identify Performance Acceptance Criteria
+2. Identify Performance Acceptance Criteria
 - Input 
     - 고객의 기대
     - 완화해야 할 위험
@@ -561,7 +561,7 @@ To the degree that performance testing begins before the system or application t
     - 핵심 성과 지표
     - 주요 비즈니스 지표
 
-3. Activity3- Plan and Design Tests
+3. Plan and Design Tests
 - Input 
     - 사용 가능한 응용 기능 및 / 또는 구성 요소
     - 응용 프로그램 사용 시나리오
@@ -575,9 +575,44 @@ To the degree that performance testing begins before the system or application t
     - 테스트 구현에 필요한 테스트 데이터
     - 구현 준비가 된 테스트
 
-4. Activity4-Configure the Test Environment
+4. Configure the Test Environment
+- Input 
+    - 개념적 전략
+    - 사용 가능한 도구
+    - 설계된 테스트
+- Output 
+    - 구성된로드 생성 및 리소스 모니터링 도구
+    - 성능 테스트를위한 환경 준비
 
+5. Implement the Test Design
+- Input 
+    - 개념적 전략
+    - 사용 가능한 도구 / 환경
+    - 사용 가능한 응용 기능 및 / 또는 구성 요소
+    - 설계된 테스트
+- Output 
+    - 검증되고 실행 가능한 테스트
+    - 검증 된 리소스 모니터링
+    - 검증 된 데이터 수집
 
+6. Execute the Test
+- Input 
+    - 작업 실행 계획
+    - 유효한 도구 / 환경
+    - 사용 가능한 응용 기능 및 / 또는 구성 요소
+    - 검증되고 실행 가능한 테스트
+- Output 
+    - 실행 결과 테스트
+
+7. Analyze Results, Report, and Retest
+- Input 
+    - 작업 실행 결과
+    - 성능 수용 기준
+    - 위험, 관심사 및 문제
+- Output 
+    - 결과 분석
+    - 권장 사항
+    - 보고서
 ## Part3를 읽고 테스트 환경에 대해 정리하시오
 
 ## Part4를 읽고 성능테스트의 목적에 대해 정리하시오
