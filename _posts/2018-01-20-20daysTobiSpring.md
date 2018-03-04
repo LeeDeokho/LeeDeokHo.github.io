@@ -261,3 +261,13 @@ JDBC의 트랙잭션은 하나의 Connection을 가져오 ㅏ사용하다가 닫
 트랙잭션의 시작과 종료는 Connection 오브젝트를 통해 이뤄지기 때문이다. JDBC에서 트랙잭션을 시작하려면 자동커밋 옵션을 false로 만들어주면 된다.
 
 setAutoCommit(false)로 트랙잭션의 시작을 선언하고 commit() 또는 rollback()으로 트랜잭션을 종료하는 작업을 `트랜잭션의 경계설정` <sup>`transaction demarcation`</sup> 
+
+
+### Annotation
+`@DirtiesContext`
+    - 컨텍스트의 DI 설정을 변경하는 테스트라는 것을 알려준다.
+
+## 6장. AOP
+
+AOP는 IoC/DI, 서비스 추상화와 더불어 스프링의 3개 기반기술의 하나다. 
+스프링에 적용된 가장 인기 있는 AOP의 적용 대상은 선언적 트랜잭션 기능이다. 
