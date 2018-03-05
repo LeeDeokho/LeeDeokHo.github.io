@@ -261,10 +261,24 @@ JDBC의 트랙잭션은 하나의 Connection을 가져오 ㅏ사용하다가 닫
 트랙잭션의 시작과 종료는 Connection 오브젝트를 통해 이뤄지기 때문이다. JDBC에서 트랙잭션을 시작하려면 자동커밋 옵션을 false로 만들어주면 된다.
 
 setAutoCommit(false)로 트랙잭션의 시작을 선언하고 commit() 또는 rollback()으로 트랜잭션을 종료하는 작업을 `트랜잭션의 경계설정` <sup>`transaction demarcation`</sup> 
+
 이렇게 하나의 DB 커넥션 안에서 만들어지는 트랜잭션을 `로컬 트랜잭션` <sup>`local transaction`</sup> 이라고 한다.
 
 
 #### 트랜잭션 동기화 <sup>transaction synchronnization</sup>
 UserService에서 느랜잭션을 시작하기 위해 만든 Connection 오브젝트를 특별한 저장소에 보관해두고, 이후에 호출되는 DAO의 메소드에서는 저장된 Connection을 가져다가 사용하게 하는 것이다. 정확히는 DAO가 사용하는 JdbcTemplate이 트랜잭션 동기화 방식을 이용하도록 하는 것이다. 
+
+
+
+### Annotation
+`@DirtiesContext`
+    - 컨텍스트의 DI 설정을 변경하는 테스트라는 것을 알려준다.
+
+## 6장. AOP
+
+AOP는 IoC/DI, 서비스 추상화와 더불어 스프링의 3개 기반기술의 하나다. 
+스프링에 적용된 가장 인기 있는 AOP의 적용 대상은 선언적 트랜잭션 기능이다. 
+
+
 
 
