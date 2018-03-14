@@ -163,6 +163,59 @@ Objective-C 시스템이 언제나 객체가 속한 클래스를 알고 있다�
 - 이런 식으로 특정 이벤트의 응답으로 취하는 특별한 동작이나 특정 속성을 정의하는 등의 일을 델리게이트 클래스가 처리하면, 클래스를 더 일반적으로 정의할 수 있다.
 
 
+## 하부 C언어 기능
+
+### 블록
+
+- 함수와 비슷하게 생겼고 동작도 유사하다.
+
+- 함수와 달리 함수나 메서드 안에서 정의할 수도 있고, 자식ㄴ과 동일한 범위에 있다면, 블록 바깥에서 정의된 변수에도 접근 가능하다. 
+
+- 보통은 블록 바깥에 정의된 변수의 값을 변경하는 것은 불가능 하지만, `__block`을 사용하면 블록 내에서 이런 변수의 값을 수정할 수 있다.
 
 
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+void printMessage (void) {
+    NSLOg(@"Programming is fun.");
+}
+
+// 이라는 함수를 블록 코드로 바꾸면 아래와 같이 된다.
+
+^(void) {
+    NSLOg(@"Programming is fun.");
+}
+
+// 또한 블록을 printMessage라는 변수에 대입할 수도 있다.
+// 블록을 변수에 대입할 때는 변수를 제대로 선언해줘야 한다.
+
+void (^printMessage) (void) = 
+    ^(void) {
+        NSLog(@"Programming is fun.");
+    } ;
+
+// 변수로 참조한 블록은 함수와 동일한 방식으로 실행할 수 있다.
+printMessage ();
+{% endhighlight %}
+
+### 함수 포인터
+
+- 선언
+
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+// int형을 반환하고 인수를 받지 않는 함수의 포인터라고 가정
+int (*fnPtr) (void);
+
+// 함수 이름을 대입하면 된다.
+fnPtr = lookup;
+
+{% endhighlight %}
+
+- 함수포인터는 흔히 다른 함수의 인수로 건네는 식으로 사용된다.
+
+
+## Foundation Framework
 
