@@ -255,6 +255,60 @@ fnPtr = lookup;
 >2. 수동 레퍼런스 카운팅 및 오토릴리스 풀
 >3. 자동 레퍼런스 카운팅(ARC)
 
+>Objective-C 2.0 부터는 자바에서 사용되는 `가비지 컬렉션`이라는 기법으로 메모리 관리를 할 수있지만, Max OS X 프로그램을 개발할 때만 이 기법을 쓸 수 있다. 가비지 컬렉션을 사용하기로 결정했다면, Xcode로 프로그램을 빌드할 때 이 기능을 켜줘야     한다. 프로그램이 구동되는 동안, 메모리 부족 상태에 들어가고 시스템이 메모리 청소를 해야 한다고 결정하면 가비지 컬렉션이 일어난다. 이 작업은 프로세서를 상당히 많이 잡아먹느 일이다. 
+
+### 수동 레퍼런스 카운팅
+
+>객체가 생성되면 초기 레퍼런스 카운트가 1로 설정된다. 매번 객체가 지속되도록 해야 할 때마다 레퍼런스 카운트를 1씩 증가시켜 참조를 생성하게 된다. 이 작업은 다음과 같이 `retain` 메시지를 객체에 보내 수행한다.
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+[MyFraction retain];
+{% endhighlight %}
+>더 이상 객체가 필요하지 않으면, release 메시지를 보내 레퍼런스 카운트를 1씩 줄여준다.
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+[MyFraction release];
+{% endhighlight %}
+
+> 객체의 레퍼런스 카운트가 0이 되면, 해당 객체가 더 이상 사용되지 않음을 시스템이 알 수 있다.(이론상으로, 애플리케이션의 어디서도 참조하지 않음을 의미하기 때문이다.) 그래서 해당 객체가 차지하고 있던 메모리 공간을 해제한다. 이 과정은 객체에 `dealloc` 메시지를 보내 처리한다. 만약 내가 만든 클래스에서 NSArray 객체를 인스턴스 변수로 가지고 있고 이 객체를 alloc으로 생성했다면, 내가 만든 클래스의 dealloc을 재정의해서 객체가 제거될 때 배열도 릴리스해줄 책임을 지게한다.
+
+> 수동 레퍼런스 카운팅을 사용할 때는, Foundation 프레임워크의 몇몇 메서드가 객체의 레퍼런스 카운트를 증가시킬 수 있음에 주의해야 한다. 예제로, NSMutableArray의 addObject: 메서드로 객체를 배열에 추가하거나, UIView의 addSubview: 메서드로 뷰를 추가하면 레퍼런스 카운트가 증가한다. 반대로 감소시키는 메서드들도 존재한다.
+
+> 객체가 파괴된 뒤에(레퍼런스 카운트가 0이 되어 dealloc이 호출된 뒤에), 그 객체를 참조하는 것은 유효하지 않다. 이런 참조를 종종 `길 잃은 포인터(dangling pointer) 참조`라고 한다. 
+
+### 객체 참조와 오토릴리스 풀
+
+> 먼저 객체를(alloc으로) 생성하고 그 객체를 반환하는 메서드를 작성해야 한다고 하자. 메서드는 객체 사용을 마쳤지만 그 객체를 반환해줘야 하므로 릴리스할 수 없다. `NSAutoreleasePoll` 클래스는 이런 문제를 해결하기 위해 만들어졌다. 이후에 릴리스해야 할 객체를 오토릴리스풀이라는 객체에 담아 관리한다. 이후라는 시점은 이 풀에 drain 메시지를 보내 풀이 드레인되는 때다.<br>객체를 오토릴리스 풀이 관리하는 객체 목록에 추가하려면 다음과 깉이 객체에 autorelease 메시지를 보낸다.
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+[result autorelease];
+{% endhighlight %}
+
+>Foundation, UIKit, AppKit 프레임워크의 클래스를 사용할 때는 이들 프레임워크의 클래스들이 오토릴리스된 객체를 생성하고 반환해줄 수 있으므로, 반드시 오토릴리스 풀을 생성해야 한다. 
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+NSAutoreleasePool * pool = [[NSAutoreleasePool allc] init];
+{% endhighlight %}
+> <br>풀을 다 사용했으면 drain 메시지를 보낸다.
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
+[pool drain];
+{% endhighlight %}
+
+>사실 alloc, copy, mutableCopy, new 라는 이름으로 시작하는 메서드로 생성된 객체는 오토릴리스되지 않는다. 이런 경우 그 객체를 소유하는 것이다. 객체를 소유하면 그 객체를 다 사용한 뒤에 객체가 사용한 메모리 공간을 릴리스해줄 책임이 있다. 이는 객체에 release 메시지를 보내 처리하거나 혹은 autorelease 메시지를 보내 오토릴리스 풀에 더할 수도 있다.
+
+### 이벤트 루프와 메모리 할당 
+
+{::comment}
+comment test
+{:/comment}
+
+
 
 
 
