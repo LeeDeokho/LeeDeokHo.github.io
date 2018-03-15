@@ -24,7 +24,9 @@ comments: true
 
 Fraction Class와 Complex class에 같은 이름의 print라는 메서드가 있다고 하자.
 
-```objectiveC
+>OBJECTIVE-C
+{:.filename}
+{% highlight swift %}
 #import "Fraction.h"
 #import "Complex.h"
 
@@ -54,7 +56,7 @@ int main(int argc, char *argv[]) {
 10 + 2.5i
 */
 
-```
+{% endhighlight %}
 
 dataValue가 어떤 클래스의 print를 호출 하는 지 어떻게 알 수 있을까 ??
 Objective-C 시스템이 언제나 객체가 속한 클래스를 알고 있다는 사실에 숨어 있다.
@@ -86,8 +88,10 @@ Objective-C 시스템이 언제나 객체가 속한 클래스를 알고 있다�
 
 - Example
     - Fraction 이라는 클래스에 add, mul, sub, div라는 메서드를 추가하고 싶다고 하자.
-    ```ObjectiveC
-    #import "Fraction.h"
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
+     #import "Fraction.h"
     @interface Fraction (MathOps)
     // 이 코드는 컴파일러에게 Fraction 클래스의 새 카테고리로 MathOps를 정의한다고 알린다.
     - (Fraction *) add: (Fraction *) f;
@@ -95,7 +99,8 @@ Objective-C 시스템이 언제나 객체가 속한 클래스를 알고 있다�
     - (Fraction *) sub: (Fraction *) f;
     - (Fraction *) div: (Fraction *) f;
     @end
-    ```
+    
+    {% endhighlight %}
 
 ### 클래스 확장
 - When ?
@@ -117,43 +122,57 @@ Objective-C 시스템이 언제나 객체가 속한 클래스를 알고 있다�
 - 프로토콜에 나열된 메서드들은 해당하는 구현 부분이 없다.
 
 - 프로토콜의 정의
-    ```objectiveC
+
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
     @protocol NSCopying
     - (id)copyWithZone: (NSZone *) zone;
     @end
-    ```
+    {% endhighlight %}
+    
 - 프로토콜을 받아들인다고 알려주려면 아래와 같이 프로토콜의 이름을 <>로 감싸면 된다.
-    ```objectiveC
+
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
     @interface AddressBook: NSObject <NSCopying>
-    ```
-
+    {% endhighlight %}
+    
 - 만일 여러개의 프로토콜을 받아들인다면 <> 안에 쉼표(,)로 구분해서 나열하면 된다.
-    ```objectiveC
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
     @interface AddressBook: NSObject <NSCopying, NSCoding>
-    ```
-
+    {% endhighlight %}
+    
 - 프로토콜을 직접 정의하더라도 구현할 필요는 없다.
 - 한 클래스가 NSCopying 프로토콜을 따른다면, 서브클래스도 이 프로토콜을 따른다.
 
 - @optional 지시어를 사용하면, 이 지시어 다음에 위치하는 메서드들은 선택 사항이다. 또한 @required를 다시 사용하면, 필수 메서드 목록을 다시 작성할 수 있다.
-    ```objectiveC
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
     @protocol Drawing
     - (void) paint;
     - (void) erase;
     @optional
     - (void) outline;
     @end
-    ```
+    {% endhighlight %}
+    
 - 어떠한 객체가 프로토콜에 따르는지를 알아보려면 conformsToProtocol: 메서드를 사용하면 된다.
-    ```objectiveC
+    >OBJECTIVE-C
+    {:.filename}
+    {% highlight swift %}
     id currentObject;
     ...
     if ( [currentObject conformsToProtocol: @protocol (Drawing)] == YES)
     {
         // currentObject에 paint, erase, outline 메시지를 보낸다.
     }
-    ```
-
+    {% endhighlight %}
+    
 - 프로토콜을 두 클래스 간의 `인터페이스`라 생각해도 된다.
 
 ### 델리게이션
@@ -219,3 +238,5 @@ fnPtr = lookup;
 
 ## Foundation Framework
 
+
+## 숫자, 스트링, 컬렉션
