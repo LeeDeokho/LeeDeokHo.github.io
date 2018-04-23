@@ -141,3 +141,26 @@ NEClass *nec = [[NECLass allloc] init];
 셀 눌러서 넘어가면 
 이미지, 타이틀, 디스크립션 찍히게
 
+## NSDate & NSTimeInterval
+NetworkInsight 모듈을 짜면서 NSDate와 NSTimeInterval을 사용했는 데,
+NSDate와 NSTimeInterval의 시간이 세컨드 단위인지, 밀리세컨드 단위인지 자세히 알아보지도 않고 사용했다.
+개인프로젝트라면 대충 사용해도 되지만, 회사에서 사용할 것이면 자세히 알고써야겠다고 코드리뷰를 하면서 느끼고 이 참에 정리해본다.
+
+### NSTimeInterval
+> A number of seconds.
+> <br> 초 라고 나와있어서 처음에는 int형이라고 생각했지만, 실제로 사용해보면 "5.02423894405365" 처럼 double형으로 값이 나온다. Declartion을 봐도 double형을 시간에 관계된 것에 쓰게끔 typedef를 해놓은 것이다. 밀리세컨드 이하의 정밀도를 보인다고 나와있는 데, 그것이 정확히 소수점 몇째자리 까지 나오는 지는 문서에는 안나와있다.
+
+> Declartion
+>
+> typedef double NSTimeInterval;
+
+> Discussion
+>
+> A NSTimeInterval value is always specified in seconds; it yields sub-millisecond precision over a range of 10,000 years.
+---
+### NSDate
+> A representation of a specific point in time that bridges to Date; use NSDate when you need reference semantics or other Foundation-specific behavior.
+
+> [NSDate date]
+>
+> Fri Apr 20 21:37:16 2018
