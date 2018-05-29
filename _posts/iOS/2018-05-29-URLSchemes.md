@@ -61,7 +61,7 @@ NSURL *myURL = [NSURL URLWithString:@"todolist://www.acme.com?Quarterly%20Report
 ![img]({{ '/assets/images/iOS/URLSchemes/URLSchemeFlow2.png' | relative_url }}){: .center-image }
 
 > Note: custom URL schemes을 지원하는 app은 URL을 처리하기 위해 app을 실행할 때 표시할 다른 시작이미지를 지정할 수 있다. 이러한 시작 이미지를 지정하는 방법에 대한 자세한 내용은 [Displaying a Custom Launch Image When a URL is Opened
-](#Displaying-a-Custom-Launch-Image-When-a-URL-is-Opened)에 나와있다.
+](#Displaying-a-Custom-Launch-Image-When-a-URL-is-Opened) 에 나와있다.
 
 
 **Handling a URL request based on a custom scheme**
@@ -129,7 +129,7 @@ NSURL *myURL = [NSURL URLWithString:@"todolist://www.acme.com?Quarterly%20Report
 
 * 위의 명명규칙에서 basename은 앱의 info.plist 파일에 있는 UILaunchImageFile 키로 지정된 기본 이미지 이름을 나타낸다. 사용자 정의 기본 이름을 지정하지 않으면 기본값인 문자열을 사용하여야한다. 이름의 <url_scheme> 부분은 URL 스키마 이름이다. myapp URL 체계에 대한 일반 시작 이미지를 지정하려면 app bundle에 Default-myapp@2x.png라는 이름의 이미지 파일을 포함시켜야한다. (@ 2x 수정자는 이미지가 망막 디스플레이를 위한 것임을 나타내며, 앱이 표준 해상도 디스플레이도 지원하는 경우 Default-myapp.png 이미지도 제공한다.)
 
-* 시작 이미지 이름에 포함 할 수있는 다른 수정자에 대한 정보는 (Information Property List Key Reference)[https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009247] 에서 `UILaunchImageFile` name key에 대한 설명을 참조.
+* 시작 이미지 이름에 포함 할 수있는 다른 수정자에 대한 정보는 [Information Property List Key Reference](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009247) 에서 `UILaunchImageFile` name key에 대한 설명을 참조.
 
 
 
