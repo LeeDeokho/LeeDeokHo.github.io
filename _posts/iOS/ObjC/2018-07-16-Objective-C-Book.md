@@ -2,9 +2,9 @@
 layout: post
 title: "Objective-C를 읽고 정리2"
 date: 2018-07-16 21:12:06
-description: Objective-C를 읽고 정리
+description: Objective-C를 읽고 정리2
 tags: 
- - iOS-ObjC
+ - iOS-ObjectiveC
 comments: true
 ---
 

@@ -4,7 +4,7 @@ title: "Programming Objective-C를 읽고 정리"
 date: 2018-03-05 00:40:06
 description: Programming Objective-C를 읽고 정리
 tags: 
- - iOS-ObjC
+ - iOS-ObjectiveC
 comments: true
 ---
 
