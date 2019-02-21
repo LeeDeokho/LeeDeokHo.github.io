@@ -1,4 +1,4 @@
 ---
 layout: tag_index
-tag: ios-ObjectiveC
+tag: iOS-ObjC
 ---

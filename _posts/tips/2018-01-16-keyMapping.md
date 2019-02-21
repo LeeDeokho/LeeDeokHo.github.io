@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "2018-01-16-CapsLock-KeyMapping-Tips"
+title: "CapsLock-KeyMapping-Tips"
 date: 2018-01-16 19:40:06
-description: 1월 16일 CapsLock-KeyMapping-Tips
+description: CaplsLock 키를 쓸모있는 키로 바꾸는 방법
 tags: 
  - tips
 comments: true
