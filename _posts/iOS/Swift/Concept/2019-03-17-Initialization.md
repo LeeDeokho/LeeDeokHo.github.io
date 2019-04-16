@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Initialization"
+date: 2019-03-17 00:30:06
+description: 초기화에 대하여
+tags: 
+ - iOS-Swift
+comments: true
+---
+
 # Initialization
 
 ## 언제 `init` 메소드가 필요할까 ??

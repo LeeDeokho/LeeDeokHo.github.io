@@ -139,7 +139,7 @@ if !defaults.synchronize() { // failed! but not clear what you can do about it }
 > 자식 클래스인지 아닌지 확실치 않은 클래스로 캐스팅할 수 있고 as가 대신 자식 클래스인지 아닌지 말해준다. 
 > 아래의 예를 보면 ...
 
->Swift
+>Swift  
 {:.filename}
 {% highlight swift %}
 
