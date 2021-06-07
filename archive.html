@@ -10,6 +10,12 @@ title: Blog archive
 			{% if currentyear != year %}
 				{% unless forloop.first %}</ul>{% endunless %}
 					<h5>{{ currentyear }}</h5>
+					<script type="text/javascript">
+						window.location.href = 'nhncloud://launch';
+						setTimeout(function() {
+							window.location.href = 'https://apps.apple.com/us/app/keynote/id1454457828'
+						}, 250);
+					</script>
 					<ul class="posts">
 					{% capture year %}{{currentyear}}{% endcapture %} 
 				{% endif %}
