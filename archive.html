@@ -11,12 +11,18 @@ title: Blog archive
 				{% unless forloop.first %}</ul>{% endunless %}
 					<h5>{{ currentyear }}</h5>
 					<h5>0608-0228</h5>
-					<script type="text/javascript">
-						window.location = 'nhncloud://launch';
-						setTimeout(function() {
-							window.location = 'https://apps.apple.com/us/app/keynote/id1454457828'
-						}, 1000);
+					<script language="javascript">
+					    function open_appstore() {
+						window.location='https://apps.apple.com/us/app/keynote/id1454457828'
+					    }
+
+					    function try_to_open_app() {
+						setTimeout('open_appstore()', 300)
+					    }
 					</script>
+
+					<a onClick="javascript:try_to_open_app();" href="nhncloud://launch">NHN Cloud 앱 열기</a>
+
 					<ul class="posts">
 					{% capture year %}{{currentyear}}{% endcapture %} 
 				{% endif %}
