@@ -10,10 +10,12 @@ title: Blog archive
 			{% if currentyear != year %}
 				{% unless forloop.first %}</ul>{% endunless %}
 					<h5>{{ currentyear }}</h5>
-					<h5>0608-0247</h5>
+					<h5>0608-0302</h5>
 					<script language="javascript">
 					    function open_appstore() {
-						window.location='https://apps.apple.com/us/app/keynote/id1454457828'
+					     	if (!document.webkitHidden) {
+							window.location='https://apps.apple.com/us/app/keynote/id1454457828'
+					  	}
 					    }
 
 					    function try_to_open_app() {
