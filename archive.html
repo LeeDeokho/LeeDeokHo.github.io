@@ -3,7 +3,7 @@ layout: page
 title: Blog archive
 ---
 
-<h2>0608-1433</h5>
+<h2>0608-1438</h5>
 
 <script language="javascript">
     function open_appstore() {
@@ -18,13 +18,16 @@ title: Blog archive
             //안드로이드폰 // https://developer.chrome.com/multidevice/android/intents 
             // 앱이 있으면 앱 실행, 없으면 마켓 이동 
             window.location.href = 'nhncloud://launch'; 
+	    setTimeout(function() {
+                window.location.href = 'market://details?id=com.nhn.toast.console'
+            }, 1000);
             //location.href = 'myappandroi://main_web'; // 안드로이드 앱 실행 
         } else if(userAgent.match(".*iPhone.*") || userAgent.match(".*iPad.*")) {
             window.location.href = 'nhncloud://launch';
 
             setTimeout(function() {
                 window.location.href = 'https://apps.apple.com/us/app/keynote/id1454457828'
-            }, 250);
+            }, 1000);
         
         }
         // setTimeout('open_appstore()', 1000)
