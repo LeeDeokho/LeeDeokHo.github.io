@@ -2,15 +2,7 @@
 layout: page
 title: Blog archive
 ---
-<div class="page-content wc-container">
-	<div class="post">
-		<h1>Blog Archive</h1>  
-		{% for post in site.posts %}
-			{% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
-			{% if currentyear != year %}
-				{% unless forloop.first %}</ul>{% endunless %}
-					<h5>{{ currentyear }}</h5>
-					<h5>0608-0952</h5>
+<h2>0608-1020</h5>
 <script language="javascript">
     function open_appstore() {
         window.location='https://apps.apple.com/us/app/keynote/id1454457828'
@@ -37,6 +29,14 @@ title: Blog archive
 	<br>
 	<br>
 
+<div class="page-content wc-container">
+	<div class="post">
+		<h1>Blog Archive</h1>  
+		{% for post in site.posts %}
+			{% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+			{% if currentyear != year %}
+				{% unless forloop.first %}</ul>{% endunless %}
+					<h5>{{ currentyear }}</h5>
 					<ul class="posts">
 					{% capture year %}{{currentyear}}{% endcapture %} 
 				{% endif %}
