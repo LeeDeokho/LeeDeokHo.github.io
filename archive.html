@@ -3,24 +3,30 @@ layout: page
 title: Blog archive
 ---
 
-<h2>0608-1050</h5>
+<h2>0608-1421</h5>
+
 <script language="javascript">
     function open_appstore() {
         window.location='https://apps.apple.com/us/app/keynote/id1454457828'
     }
 
     function try_to_open_app() {
-        try {
+
+        var userAgent = navigator.userAgent; 
+        var visiteTm = ( new Date() ).getTime(); 
+        if(userAgent.match(".*Android.*")) {
+            //안드로이드폰 // https://developer.chrome.com/multidevice/android/intents 
+            // 앱이 있으면 앱 실행, 없으면 마켓 이동 
+            location.href = 'intent://main_web#Intent;scheme=myappandroi;package=com.myappandroi.m;end'; 
+            //location.href = 'myappandroi://main_web'; // 안드로이드 앱 실행 
+        } else if(userAgent.match(".*iPhone.*") || userAgent.match(".*iPad.*")) {
             window.location.href = 'nhncloud://launch';
-        } catch (error) {
-            console.error(error);
-        }
+
+            setTimeout(function() {
+                window.location.href = 'https://apps.apple.com/us/app/keynote/id1454457828'
+            }, 250);
         
-        setTimeout(function() {
-            window.location.href = 'https://apps.apple.com/us/app/keynote/id1454457828'
-        }, 2000);
-
-
+        }
         // setTimeout('open_appstore()', 1000)
     }
 </script>
